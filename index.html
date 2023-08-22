@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        mouse events
+            hover
+            mouseIn
+            mouseOut
+            mouseEnter
+            mouseLeave
+        Keyboard events
+            keyPress
+            keyUp
+            keyDown
+        basic events
+            onClick
+            onLoad
+            onChange
+            onDblClick
+     -->
+
+    <!-- <button onclick="hello()" >Click Me !!!</button> -->
+    <!-- <button ondblclick="hello()">Click Me !!!</button> -->
+    <!-- <button onmouseover="hello()">Click Me !!!</button> -->
+    <!-- <button onmouseleave="hello()">Click Me !!!</button> -->
+    <!-- <button>Click Me !!!</button>
+    <input onchange="hello(event)" type="text"> -->
+
+    <label for="name">name</label>
+    <input onchange="name1(event)" type="text" />
+    <br />
+    <label for="phno">ph no</label>
+    <input onchange="number(event)" type="number" name="" id="" />
+    <br />
+    <label for="email">E mail</label>
+    <input onchange="email(event)" type="email" />
+    <br />
+    <label for="password">password</label>
+    <input onchange="password(event)" type="password" name="" id="" />
+    <br />
+    
+    <input type="submit" onclick="submitDetails()"></input>
+    <a href="./page2.html">
+
+        <button onclick="submitDetails()">next page</button>
+    </a>
+    <script>
+      const details = {
+        name: "",
+        phno: "",
+        email: "",
+        password: "",
+        fruits:""
+      };
+      var hello = "sghdjhsgda"
+      function name1(edsgdsgsf) {
+        details.name = edsgdsgsf.target.value;
+        // console.log(details);
+      }
+      function number(e) {
+        details.phno = e.target.value;
+        // console.log(details);
+      }
+      function email(e) {
+        details.email = e.target.value;
+        // console.log(details);
+      }
+      function password(e) {
+          details.password = e.target.value;
+    }
+    
+      function submitDetails() {
+        localStorage.setItem("userDetails", JSON.stringify(details))
+        console.log(details);
+      }
+      //   function hello(e) {
+      //     console.log(e);
+      // }
+    </script>
+  </body>
+</html>
