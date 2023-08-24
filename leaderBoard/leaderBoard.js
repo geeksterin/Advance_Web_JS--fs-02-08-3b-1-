@@ -23,6 +23,7 @@ AddDetailsButton.addEventListener("click", () => {
   country.value = "";
   score.value = "";
   sortBoard();
+  deleteElemnt();
 });
 
 function sortBoard() {
@@ -55,4 +56,13 @@ function sortBoard() {
   sortedArray.forEach((ele) => {
     scoreMainContainer.append(ele);
   });
+}
+
+function deleteElemnt() {
+  const deleteIcon = document.querySelectorAll(".deleteIcon");
+  deleteIcon.forEach((ele)=>{
+    ele.addEventListener("click", (e)=>{
+        return e.target.parentElement.remove()
+    })
+  })
 }
