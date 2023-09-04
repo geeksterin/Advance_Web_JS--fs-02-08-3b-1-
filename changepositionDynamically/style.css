@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    width: 1500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+#buttonNo{
+    padding: .5rem 1rem;
+    position: absolute;
+    top: 400px;
+    transition: all .5s ease-in-out;
+}
+
+#buttonYes{
+    padding: .5rem 1rem;
+}
+
+button:hover{
+    cursor: pointer;
+    
+}
