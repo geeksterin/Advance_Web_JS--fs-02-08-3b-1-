@@ -1,6 +1,8 @@
 const SearchBar = document.getElementById("searchBar");
-const searchValue = SearchBar.value;
 const cardsContainer = document.getElementById("cardsContainer");
+const searchButton = document.getElementById("search");
+const resetButon = document.getElementById("resetButton");
+
 const pokemonDetails = [];
 const fetchPokemonDetails = () => {
   const promises = [];
@@ -56,10 +58,33 @@ const createPokemonCard = (pokemon) => {
   cardDiv.appendChild(heading);
   abilitesparas.map((ele) => {
     // console.log(ele);
-    cardDiv.appendChild(ele);
+    abilitiesDiv.appendChild(ele);
   });
+  cardDiv.appendChild(abilitiesDiv);
+  abilitiesDiv.classList.add("abilitiesDiv");
   cardDiv.appendChild(typePara);
   cardsContainer.appendChild(cardDiv);
 };
+
+searchButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log(SearchBar.value);
+  const filteredValues = pokemonDetails.filter((ele) =>
+    ele.name.includes(SearchBar.value.toLowerCase())
+  );
+  console.log(filteredValues);
+  cardsContainer.innerHTML = "";
+  filteredValues.map((pokemon) => {
+    createPokemonCard(pokemon);
+  });
+  SearchBar.value = "";
+});
+
+resetButon.addEventListener("click", (e) => {
+  e.preventDefault();
+  cardsContainer.innerHTML = "";
+
+  fetchPokemonDetails();
+});
 
 fetchPokemonDetails();
