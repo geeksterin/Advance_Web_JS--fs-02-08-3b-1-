@@ -1,5 +1,3 @@
-console.log("file linked");
-
 const container = document.getElementById("container");
 
 const url = "https://kontests.net/api/v1/all";
