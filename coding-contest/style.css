@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* #7c076f
+#121212 */
+
+body {
+  background-color: #000000;
+}
+
+#container {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contestCard {
+  /* border: 2px solid green; */
+  height: 300px;
+  width: 300px;
+  margin: 1rem;
+  overflow-x: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(99, 99, 99, 0.396);
+  backdrop-filter: blur(5px);
+  border: 0.5px solid rgb(151, 151, 151);
+  border-radius: 10px;
+}
+
+.name {
+  text-align: center;
+  color: white;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #7c076f;
+  border-radius: 50%;
+  position: fixed;
+  top: 10px;
+  left: 100px;
+  filter: blur(5px);
+}
+
+@keyframes x {
+  100% {
+    transform: translateX(calc(100vw - 95vw));
+  }
+}
+@keyframes xx {
+  100% {
+    transform: translateX(calc(95vw - 100vw));
+  }
+}
+
+@keyframes y {
+    100% {
+      transform: translateY( calc(100vh - 95vh) );
+    }
+  }
+@keyframes yy {
+    100% {
+      transform: translateY( calc(95vh - 100vh) );
+    }
+  }
+
+.circle2 {
+  top: 100px;
+  left: 400px;
+  animation: x 2.6s linear infinite alternate;
+
+}
+
+.circle3 {
+  top: 400px;
+  left: 200px;
+  animation: y 0.8s linear infinite alternate;
+
+}
+
+.circle4 {
+  top: 500px;
+  left: 500px;
+  animation: xx 2.6s linear infinite alternate;
+
+}
+
+.circle5 {
+  top: 50px;
+  left: 1400px;
+  animation: yy 0.8s linear infinite alternate;
+
+}
+
+.circle6 {
+  top: 600px;
+  left: 1300px;
+  animation: x 2.6s linear infinite alternate;
+
+}
+.circle7 {
+  top: 400px;
+  left: 700px;
+  animation: y 0.8s linear infinite alternate;
+
+}
+.circle8 {
+  top: 300px;
+  left: 900px;
+  animation: xx 2.6s linear infinite alternate;
+
+}
+.circle9 {
+  top: 100px;
+  left: 1100px;
+  width: 150px;
+  height: 150px;
+  animation: yy 0.8s linear infinite alternate;
+
+}
+.circle10 {
+  top: 700px;
+  left: 100px;
+  width: 200px;
+  height: 200px;
+  animation: x 2.6s linear infinite alternate;
+
+}
