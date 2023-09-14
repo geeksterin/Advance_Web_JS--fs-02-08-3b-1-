@@ -35,6 +35,7 @@ response
       contestLink.target = "_blank";
       contestLink.innerText = "Take me to the contest...";
       contestLink.classList.add("contestLink");
+      contestLink.id = "contestLink"
 
       contestCard.appendChild(name);
       contestCard.appendChild(hostingPlatform);

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 2px solid red;
+        height: 50vh;
+        width: 50vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const mychart = document.getElementById("myChart");
+
+      const obj = {
+        labels: ["hin", "eng", "maths", "Science"],
+        datasets: [
+          {
+            label: "Rahul",
+            data: [12, 34, 56, 78],
+            backgroundColor:"red",
+            borderRadius:10,
+            borderWidth:3,
+            borderColor: "black"
+
+          },
+
+          {
+            label: "Ajay",
+            data: [78, 89, 78, 90],
+            backgroundColor:"red",
+            borderRadius:10,
+            borderWidth:3,
+            borderColor: "black"
+
+          },
+          {
+            label: "Chandan",
+            data: [78, 89, 78, 45],
+            backgroundColor:"red",
+            borderRadius:10,
+            borderWidth:3,
+            borderColor: "black"
+
+          },
+          {
+            label: "Atul",
+            data: [78, 89, -78, 45],
+            backgroundColor:"red",
+            borderRadius:10,
+            borderWidth:3,
+            borderColor: "black"
+
+          },
+         
+          {
+            label: "Atul",
+            data: [78, 89, -78, 45],
+            backgroundColor:"red",
+            borderRadius:10,
+            borderWidth:3,
+            borderColor: "black"
+
+          },
+         
+          {
+            label: "Atul",
+            data: [78, 89, 78, 45],
+            backgroundColor:"red",
+            borderRadius:10,
+            borderWidth:3,
+            borderColor: "black"
+
+          },
+         
+        ],
+      };
+
+      new Chart(mychart, {
+        type: "bar",
+        data: {
+          labels: obj.labels,
+          datasets: obj.datasets,
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
