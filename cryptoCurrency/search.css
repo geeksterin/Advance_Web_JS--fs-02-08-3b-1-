@@ -1,0 +1,19 @@
+.searchResultContainer{
+    /* border:2px solid red; */
+    overflow-y: scroll;
+}
+
+.searchContainer22{
+    margin-bottom: 1rem;
+}
+
+.searchContainer22 h3{
+    width: 5%;
+    /* border: 1px solid red; */
+}
+
+
+.searchContainer22 div{
+    width: 60%;
+    /* border: 2px solid green; */
+}

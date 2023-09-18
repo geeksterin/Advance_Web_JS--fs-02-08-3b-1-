@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./cryptoCurrency.css" />
+    <link rel="stylesheet" href="./search.css">
   </head>
   <body>
     <!-- header -->
@@ -22,17 +23,18 @@
     <div class="searchSectionMainContainer">
       <div class="searchContaner" >
         <h1>Search...</h1>
-        <form>
-          <input type="text" />
-          <input type="button" value="Search" />
+        <form method="GET">
+          <input type="text" name="q" />
+          <input type="submit" value="Search" />
         </form>
       </div>
       <hr />
-      <div class="searchResultContainer">sample text</div>
+      <div class="searchResultContainer" id="searchResultContainer"></div>
     </div>
     <footer>
       <p>CryptoView Project</p>
       <img src="./github_logo.png" alt="" />
     </footer>
+    <script src="./search.js"></script>
   </body>
 </html>

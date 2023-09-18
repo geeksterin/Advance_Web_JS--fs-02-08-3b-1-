@@ -3,13 +3,17 @@ const url =
 
 function fetchdata1() {
   const data = fetch(url);
-  data
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      console.log("data from .then function", data);
-    });
+  try {
+    data
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log("data from .then function", data);
+      });
+  } catch (error) {
+    console.log(error);
+  }
 }
 fetchdata1();
 
